@@ -2,12 +2,13 @@
 using namespace std;
 
 int binary(int *mas, int elem, int left, int right) {
-	int mid = (left + right) / 2;
+	int mid = (int)ceil((left + right) / 2);
 	
 	if (mas[mid] != elem) {
-		cout << mid << " ";
+		cout << mas[mid] << " ";
 	}
-	if (mas[mid] = elem) {
+	if (mas[mid] == elem) {
+		cout << mas[mid] << endl;
 		return mid;
 	}
 	else if (mas[mid] > elem) {
@@ -46,6 +47,6 @@ int main() {
 	// binary-------------------------------------------------------------------------
 	cout << "Binary search:" << endl;
 	int binResult;
-	binResult = binary(mas, elem, mas[0], mas[num]);
-	cout << binResult << endl;
+	binResult = binary(mas, elem, 0, num);
+	//cout <<  << endl;
 }
