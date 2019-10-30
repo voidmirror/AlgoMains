@@ -1,2 +1,2 @@
 # AlgoMains
- 
+ Only for Stepik.
