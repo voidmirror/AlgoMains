@@ -20,6 +20,10 @@ int binary(int *mas, int elem, int left, int right) {
 
 }
 
+int doubling(int *mas, int elem, int left, int right) {
+
+}
+
 int main() {
 
 	// linear-------------------------------------------------------------------------
@@ -48,5 +52,9 @@ int main() {
 	cout << "Binary search:" << endl;
 	int binResult;
 	binResult = binary(mas, elem, 0, num);
-	//cout <<  << endl;
+	
+	// doubling-----------------------------------------------------------------------
+	cout << "Doubling search:" << endl;
+	int doubResult;
+
 }
