@@ -63,5 +63,5 @@ int main() {
 		if (i != n - 2) {
 			cout << endl;
 		}
-	}
+	} 
 }

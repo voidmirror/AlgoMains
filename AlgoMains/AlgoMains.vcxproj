@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Krusckal.cpp" />
+    <ClCompile Include="Prim.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B42BE757-5FB5-43F9-A6D5-5FC086E7DDB6}</ProjectGuid>
