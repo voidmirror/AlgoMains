@@ -4,30 +4,30 @@ int main() {
 
 }
 
-//Находим самую левую и самую правую точки.
-//Запускаем Quickhull для множества точек выше соединяющего их отрезка и ниже.
+//находим самую левую и самую правую точки.
+//запускаем quickhull для множества точек выше соединяющего их отрезка и ниже.
 //
-//function QuickHull(a, b, s) {
-//	if S = { a, b } then return(a, b)
+//function quickhull(a, b, s) {
+//	if s = { a, b } then return(a, b)
 //	else {
 //		c = index of right of(a, c)
-//			A = точки справа от(a, c)
-//			B = точки справа от(a, b)
-//			return QuickHull(a, c, A) объединенное с QuickHull(c, b, B)
+//			a = точки справа от(a, c)
+//			b = точки справа от(a, b)
+//			return quickhull(a, c, a) объединенное с quickhull(c, b, b)
 //	}
-//	Исходник на Си
+//	исходник на си
 //#include <stdlib.h>
 //#include <math.h>
 //
-//#define N 3              /* the number of points */
+//#define n 3              /* the number of points */
 //
-//		int pt[N], belongs_to_hull[N], *upper, *lower;
+//		int pt[n], belongs_to_hull[n], *upper, *lower;
 //
 //	/* x and y point coordinates */
-//	double x[N], y[N];
+//	double x[n], y[n];
 //
 //	/* the result vector; indicates whether a point belongs to the hull*/
-//	int belongs_to_hull[N];
+//	int belongs_to_hull[n];
 //
 //
 //	/* output routines: */
@@ -35,7 +35,7 @@ int main() {
 //	{
 //		long j;
 //
-//		printf("Array with %d points:\n", n);
+//		printf("array with %d points:\n", n);
 //		for (j = 0; j<n; j++)
 //			printf("point %d = (%d,%d)\n", pt[j], (int)x[pt[j]], (int)y[pt[j]]);
 //		printf("\n");
@@ -45,14 +45,14 @@ int main() {
 //	{
 //		int j;
 //
-//		printf("Points of the convex hull:\n");
-//		for (j = 0; j<N; j++)
+//		printf("points of the convex hull:\n");
+//		for (j = 0; j<n; j++)
 //		if (belongs_to_hull[j])
 //			printf(" (%d,%d)", (int)x[j], (int)y[j]);
 //	}
 //
 //
-//	/* quickhull algorithm, applied to set S of n points (x[],y[]) */
+//	/* quickhull algorithm, applied to set s of n points (x[],y[]) */
 //
 //#define cross(p,a,b) \
 //	/* return crossproduct of vectors p-a and b-a */ \
@@ -121,13 +121,13 @@ int main() {
 //
 //	void qh(int *pt, int n)
 //	{
-//		/* DC step: select pivot point from pt */
+//		/* dc step: select pivot point from pt */
 //		int pivotpos, pivot;
 //		int p1 = pt[0], p2 = pt[1];
 //		int *left1, *left2, leftcnt1, leftcnt2;
 //
-//		/* DC step: select any pivot point from pt.
-//		We have p1==pt[0],p2==pt[1] */
+//		/* dc step: select any pivot point from pt.
+//		we have p1==pt[0],p2==pt[1] */
 //		if (n == 2) return;
 //
 //		if (n == 3) {
@@ -159,28 +159,28 @@ int main() {
 //		int minxpt, maxxpt;
 //		double xj;
 //
-//		for (j = 0; j<N; j++) {
+//		for (j = 0; j<n; j++) {
 //			x[j] = rand();
 //			y[j] = rand();
 //			pt[j] = j;
 //		}
 //
-//		print_array(pt, N);
+//		print_array(pt, n);
 //
-//		upper = (int *)malloc(N*sizeof(int));
-//		lower = (int *)malloc(N*sizeof(int));
+//		upper = (int *)malloc(n*sizeof(int));
+//		lower = (int *)malloc(n*sizeof(int));
 //
 //		/* random points initialization */
-//		for (j = 0; j<N; j++) belongs_to_hull[j] = 0;
+//		for (j = 0; j<n; j++) belongs_to_hull[j] = 0;
 //
-//		inithull(pt, N, &minxpt, &maxxpt);
+//		inithull(pt, n, &minxpt, &maxxpt);
 //
 //		/*  now split original set of points:
 //		*  into upper[] (all nodes left of (p1,p2), including p1,p2
 //		*  and  lower[] (all points right of (p1,p2), including p1,p2
 //		*/
 //
-//		uppercnt = lowercnt = N;
+//		uppercnt = lowercnt = n;
 //
 //		upper = delete_right(pt, &uppercnt, minxpt, maxxpt);
 //		lower = delete_right(pt, &lowercnt, maxxpt, minxpt);
