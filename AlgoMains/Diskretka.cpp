@@ -1,21 +1,21 @@
-#include <iostream>
-
-int main() {
-
-}
-
-//находим самую левую и самую правую точки.
-//запускаем quickhull для множества точек выше соединяющего их отрезка и ниже.
+//#include <iostream>
 //
-//function quickhull(a, b, s) {
-//	if s = { a, b } then return(a, b)
-//	else {
-//		c = index of right of(a, c)
-//			a = точки справа от(a, c)
-//			b = точки справа от(a, b)
-//			return quickhull(a, c, a) объединенное с quickhull(c, b, b)
-//	}
-//	исходник на си
+//int main() {
+//
+//}
+//
+////находим самую левую и самую правую точки.
+////запускаем quickhull для множества точек выше соединяющего их отрезка и ниже.
+////
+////function quickhull(a, b, s) {
+////	if s = { a, b } then return(a, b)
+////	else {
+////		c = index of right of(a, c)
+////			a = точки справа от(a, c)
+////			b = точки справа от(a, b)
+////			return quickhull(a, c, a) объединенное с quickhull(c, b, b)
+////	}
+////	исходник на си
 //#include <stdlib.h>
 //#include <math.h>
 //
