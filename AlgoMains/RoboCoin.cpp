@@ -27,7 +27,7 @@ int main() {
 			cin >> data[i][j];
 			if (data[i][j][0] == 'S') {
 				startX = i; startY = j;
-				cout << startX << " " << startY << endl;
+				//cout << startX << " " << startY << endl;
 			}
 		}
 	}
@@ -69,12 +69,12 @@ int main() {
 		}
 	}
 	
-	for (int i = 0; i < matrX; i++) {
+	/*for (int i = 0; i < matrX; i++) {
 		for (int j = 0; j < matrY; j++) {
 			cout << field[i][j] << " ";
 		}
 		cout << endl;
-	}
+	}*/
 
 	// coins matrix-------------------------------------------------------------------
 
@@ -90,25 +90,25 @@ int main() {
 			coins[i][j] = 0;
 		}
 	}
-	for (int i = 0; i < matrX; i++) {
+	/*for (int i = 0; i < matrX; i++) {
 		for (int j = 0; j < matrY; j++) {
 			cout << coins[i][j] << " ";
 		}
 		cout << endl;
-	}
+	}*/
 
 	for (int i = 1; i < matrX; i++) {
 		for (int j = 1; j < matrY; j++) {
 			coins[i][j] = max(coins[i - 1][j], coins[i][j - 1]) + field[i][j];
 		}
 	}
-	cout << endl;
+	/*cout << endl;
 	for (int i = 0; i < matrX; i++) {
 		for (int j = 0; j < matrY; j++) {
 			cout << coins[i][j] << " ";
 		}
 		cout << endl;
-	}
+	}*/
 
 	vector <vector <int>> path;
 	int string = matrX - 1;
@@ -142,7 +142,7 @@ int main() {
 	path[cells].push_back(string);
 	path[cells].push_back(colomn);
 
-	cout << endl;
+	/*cout << endl;
 	for (int i = 0; i < cells + 1; i++) {
 		for (int j = 0; j < 2; j++) {
 			cout << path[i][j] << " ";
@@ -158,8 +158,14 @@ int main() {
 		}
 		cout << endl;
 	}
+	cout << endl;*/
 
-
+	cout << "Path:" << endl;
+	for (int i = 0; i < cells + 1; i++) {
+		cout << "(" << path[i][0] - 1 << "," << path[i][1] - 1 << ")" << " ";
+	}
+	cout << endl;
+	cout << "Coins: " << coins[matrX - 1][matrY - 1];
 
 
 	/*
