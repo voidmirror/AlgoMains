@@ -150,9 +150,11 @@ int main() {
 		cout << endl;
 	}
 
-	cout << endl;
+	cout << endl;*/
+
 	reverse(path.begin(), path.end());
-	for (int i = 0; i < cells + 1; i++) {
+
+	/*for (int i = 0; i < cells + 1; i++) {
 		for (int j = 0; j < 2; j++) {
 			cout << path[i][j] << " ";
 		}
@@ -167,34 +169,4 @@ int main() {
 	cout << endl;
 	cout << "Coins: " << coins[matrX - 1][matrY - 1];
 
-
-	/*
-	// Vector of current Robot's path
-	vector <Cell> way;
-
-	// reflexion of Explored field's cells
-	vector <vector <int>> fieldPhantom;
-	field.resize(matrX);
-	for (int i = 0; i < matrX; i++) {
-		field[i].resize(matrY);
-	}
-	for (int i = 0; i < matrX; i++) {
-		for (int j = 0; j < matrY; j++) {
-			fieldPhantom[i][j] = 1;			// if (fieldPhantom[i][j])
-		}
-	}
-
-	// right-down --------------------------------------------------------------------
-
-	int downChange = 0, rightChange = 0, xCounter = 0,  yCounter = 0;
-	for (xCounter; xCounter < matrX - downChange; xCounter++) {
-		for (yCounter; yCounter < matrY; yCounter++) {
-
-
-			//rightChange++;
-		}
-
-		//downChange++;
-	}
-	*/
 }
