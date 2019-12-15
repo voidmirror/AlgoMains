@@ -11,8 +11,11 @@ struct Cell {
 int main() {
 	int matrX, matrY;
 	cin >> matrX >> matrY;
+	matrX++;	// for creating additional 0-cross
+	matrY++;	// for creating additional 0-cross
 
 	// create matrix------------------------------------------------------------------
+
 	// Field matrix
 	vector <vector <int>> field;
 	field.resize(matrX);
@@ -20,9 +23,15 @@ int main() {
 		field[i].resize(matrY);
 	}
 
-	
 	for (int i = 0; i < matrX; i++) {
-		for (int j = 0; j < matrY; j++) {
+		field[0][i] = 0;
+	}
+	for (int i = 0; i < matrY; i++) {
+		field[i][0] = 0;
+	}
+	
+	for (int i = 1; i < matrX; i++) {
+		for (int j = 1; j < matrY; j++) {
 			cin >> field[i][j];
 		}
 	}
@@ -34,6 +43,9 @@ int main() {
 		cout << endl;
 	}
 
+
+
+	/*
 	// Vector of current Robot's path
 	vector <Cell> way;
 
@@ -61,4 +73,5 @@ int main() {
 
 		//downChange++;
 	}
+	*/
 }
